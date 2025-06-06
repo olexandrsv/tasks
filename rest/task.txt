@@ -1,0 +1,60 @@
+Entities: Books, Authors, Categories
+Вимоги: система має надавати можливість додавати, змінювати та видаляти книги, авторів та категорії
+Запити:
+GET https://service/books?page=10 - отримати всі книги сторінки 10
+    404 - NotFound
+необхідне кешування на стороні клієнта, оскільки отримано великий масив даних
+GET https://service/books/1 - отримати книгу 1
+    404 - NotFound
+POST https://service/books - додати книгу
+Authentication: Basic login password
+    401 - Unauthorized
+    403 - Forbidden
+PUT https://service/books/1 - змінити дані книги 1
+Authentication: Basic login password
+    401 - Unauthorized
+    403 - Forbidden
+    404 - NotFound
+DELETE https://service/books/1 - видалити книгу 1
+    401 - Unauthorized
+    403 - Forbidden
+    404 - NotFound
+
+GET https://service/authors?page=5 - отримати всіх авторів сторінки 5
+    404 - NotFound
+необхідне кешування на стороні клієнта, оскільки отримано великий масив даних
+GET https://service/authors/1 - отримати автора 1
+    404 - NotFound
+POST https://service/authors - додати автора
+Authentication: Basic login password
+    401 - Unauthorized
+    403 - Forbidden
+PUT https://service/authors/1 - змінити дані автора 1
+Authentication: Basic login password
+    401 - Unauthorized
+    403 - Forbidden
+    404 - NotFound
+DELETE https://service/authors/1 - видалити автора 1
+    401 - Unauthorized
+    403 - Forbidden
+    404 - NotFound
+
+GET https://service/categories - отримати всі категорії
+    404 - NotFound
+необхідне кешування на стороні клієнта, оскільки отримано великий масив даних
+GET https://service/categories/1 - отримати категорію 1
+    404 - NotFound
+POST https://service/categories - додати категорію
+Authentication: Basic login password
+    401 - Unauthorized
+    403 - Forbidden
+PUT https://service/categories/1 - змінити дані категорії 1
+Authentication: Basic login password
+    401 - Unauthorized
+    403 - Forbidden
+    404 - NotFound
+DELETE https://service/categories/1 - видалити категорію 1
+    401 - Unauthorized
+    403 - Forbidden
+    404 - NotFound
+
